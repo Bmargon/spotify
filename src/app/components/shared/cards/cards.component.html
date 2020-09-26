@@ -1,0 +1,11 @@
+<div class="container mt-5">
+    <div class="card-columns">
+        <div class="card" (click)="cancionesGeneros(item)" *ngFor="let item of items">
+          <img [src]="item.icons[0].url" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class=" h3 card-title">{{item.name}}</h5>
+          </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,26 @@
+<div class="container mt-5">
+
+
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Img</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Artista</th>
+        <th scope="col">Preview</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of tracks; let i = index">
+        <th scope="row">{{i + 1}}</th>
+        <td><img [src]="item.track.album.images[0].url" alt=""></td>
+        <td>{{item.track.name}}</td>
+        <td>{{item.track.artists[0].name}}</td>
+        <td><audio src="{{item.track.preview_url}}" controls></audio></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</div>

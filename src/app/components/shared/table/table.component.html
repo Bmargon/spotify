@@ -1,0 +1,16 @@
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Img</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Preview</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+        <th><img [src]="item.images[0].url" alt=""></th>
+        <td>{{item.name}}</td>
+        <td><a class="btn btn-outline-light" (click)="navigation(item)">tracks</a></td>
+      </tr>
+    </tbody>
+</table>
